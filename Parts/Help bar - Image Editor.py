@@ -21,7 +21,7 @@ for i in range(5):
         btn_info = Button(master=frm_helpbar, text = "Info", command = lambda:info())
         btn_info.pack()
     if (i == 4):
-        btn_help = Button(master = frm_helpbar, text = "Help", command = lambda:help())
+        btn_help = Button(master = frm_helpbar, text = "Help", command = lambda:webbrowser.open_new(r"https://github.com/tuongnguyen48205/Image-Editor/blob/main/README.md"))
         btn_help.pack()
         
                 
@@ -37,15 +37,6 @@ def info():
                      fg = "black", master = info, font = ("Times", 15))
     lbl_info_title.pack()
     lbl_info.pack()
-    return
-
-def help():
-    '''
-    This function opens up a new window which shows all the controls, etc.
-    Also describes each transformation
-    '''
-    help = Tk()
-    help.title("Help")
     return
 
 def restart():
